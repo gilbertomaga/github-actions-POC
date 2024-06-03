@@ -38,6 +38,9 @@ jobs:
 
     - name: Build with Gradle Wrapper
       run: ./gradlew build
+    
+    - name: Debug
+      run: ls -lrtha
       
     - name: Build and Publish docker image
       uses: mr-smithers-excellent/docker-build-push@v6
