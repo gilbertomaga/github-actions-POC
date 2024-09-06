@@ -1,11 +1,12 @@
 name: Java CI with Gradle
 
 on:
+  workflow_dispatch:
   push:
-    branches: [ "reusable-wf" ]
+    branches: [ "reusable-wf-upload-download-artifact" ]
 
 jobs:
   use-reusable-workflow:
-    uses: gilbertomaga/github-actions-reusable-wf/.github/workflows/reusable-workflow.yml@master
+    uses: gilbertomaga/github-actions-reusable-wf/.github/workflows/reusable-wf-upload-download-artifact.yml@master
     with:
       build_dir: src
